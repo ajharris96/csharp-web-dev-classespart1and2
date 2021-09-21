@@ -27,13 +27,21 @@ namespace SchoolPractice
             nextStudentId++;
         }
 
-        // TODO: Complete the AddGrade method.
+        
         public void AddGrade(int courseCredits, double grade)
         {
-            // Update the appropriate properties: NumberOfCredits, Gpa
+            double currentQualityScore = Gpa * NumberOfCredits;
+            double totalQualityScore = currentQualityScore + (courseCredits * grade);
+            NumberOfCredits += courseCredits;
+            Gpa = totalQualityScore / NumberOfCredits;
         }
 
-        //TODO: Complete the GetGradeLevel method here:
+        
+
+
+
+
+
         public string GetGradeLevel(int credits)
         {
             if (credits >= 0 && credits <= 29)
