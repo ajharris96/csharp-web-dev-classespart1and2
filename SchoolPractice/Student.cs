@@ -36,8 +36,27 @@ namespace SchoolPractice
         //TODO: Complete the GetGradeLevel method here:
         public string GetGradeLevel(int credits)
         {
-            // Determine the grade level of the student based on NumberOfCredits
-            return "grade level tbd";
+            if (credits >= 0 && credits <= 29)
+            {
+                return "Freshman";
+            }
+            else if (credits >= 30 && credits <= 59)
+            {
+                return "Sophomore";
+            }
+            else if (credits >= 60 && credits <= 89)
+            {
+                return "Junior";
+            }
+            else if (credits >= 90)
+            {
+                return "Senior";
+            }
+            else
+            {
+
+                return "grade level tbd";
+            }
         }
 
         // TODO: Add your custom 'ToString' method here. Make sure it returns a well-formatted string rather
